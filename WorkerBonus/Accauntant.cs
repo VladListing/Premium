@@ -8,18 +8,45 @@ namespace WorkerBonus
 {
     enum Position : int
     {
-        Junior = 100,
-        Middle = 120,
-        Senior = 150,
-        Teamleader = 180
+        Junior,
+        Middle,
+        Senior,
+        Teamleader
     }
 
 
     class Accauntant
     {
+        public int GetHours(Position programmer)
+        {
+            var a =0;
+            switch (programmer)
+            {
+                case Position.Junior:
+                    a = 100;
+                    break;
+
+                case Position.Middle:
+                    a = 120;
+                    break;
+
+                case Position.Senior:
+                    a = 150;
+                    break;
+
+                case Position.Teamleader:
+                    a = 180;
+                    break;                   
+            }
+
+            return a;
+        }
+
+
+
         public bool AskForBonus(Position worker, int hours)
         {
-            if ((int)worker < hours )
+            if (GetHours(worker) < hours )
             {
                 return false;
             }
