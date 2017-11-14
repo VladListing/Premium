@@ -39,7 +39,7 @@ namespace WorkerBonus
                     break;
 
                 default:
-                    throw new InvalidOperationException("unknown item type");
+                    throw new InvalidOperationException("unknown programmer position");
             }
 
             return a;
