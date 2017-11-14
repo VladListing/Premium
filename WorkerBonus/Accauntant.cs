@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WorkerBonus
 {
-    enum Position
+    enum Position : int
     {
         Junior = 100,
         Middle = 120,
@@ -17,5 +17,16 @@ namespace WorkerBonus
 
     class Accauntant
     {
+        public bool AskForBonus(Position worker, int hours)
+        {
+            if ((int)worker < hours )
+            {
+                return true;
+            }
+            else 
+            {
+                return false;
+            }
+        }
     }
 }
