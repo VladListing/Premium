@@ -36,7 +36,10 @@ namespace WorkerBonus
 
                 case Position.Teamleader:
                     a = 180;
-                    break;                   
+                    break;
+
+                default:
+                    throw new InvalidOperationException("unknown item type");
             }
 
             return a;
