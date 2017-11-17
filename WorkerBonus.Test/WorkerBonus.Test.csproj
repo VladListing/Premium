@@ -69,6 +69,12 @@
   <ItemGroup>
     <Analyzer Include="..\WorkerBonus\packages\xunit.analyzers.0.7.0\analyzers\dotnet\cs\xunit.analyzers.dll" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WorkerBonus\WorkerBonus.csproj">
+      <Project>{aecf4f36-7e74-459b-aa79-b8678e2fb958}</Project>
+      <Name>WorkerBonus</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

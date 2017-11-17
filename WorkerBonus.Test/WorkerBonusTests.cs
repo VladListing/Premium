@@ -7,7 +7,27 @@ using Xunit;
 
 namespace WorkerBonus.Test
 {
-    class WorkerBonusTests
+    public class WorkerBonusTests
     {
+
+        [Fact] 
+        void ElementTest()
+        {
+            Accauntant accauntant = new Accauntant();
+               
+            //Assert
+            Assert.Equal( 100  , accauntant.GetHours(Position.Junior));
+
+        }
+
+        [Fact]
+        void ResultTest()
+        {
+            Accauntant accauntant = new Accauntant();
+
+            //Assert
+            Assert.False(accauntant.AskForBonus(Position.Junior, 120 ));
+
+        }
     }
 }

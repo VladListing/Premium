@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WorkerBonus
 {
-    enum Position : int
+    public enum Position : int
     {
         Junior,
         Middle,
@@ -15,7 +15,7 @@ namespace WorkerBonus
     }
 
 
-    class Accauntant
+    public class Accauntant
     {
         public int GetHours(Position programmer)
         {
