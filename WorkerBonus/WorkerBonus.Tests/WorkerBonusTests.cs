@@ -1,17 +1,16 @@
 ﻿using Xunit;
 
-namespace WorkerBonus.Test
+namespace WorkerBonus.Tests
 {
     public class WorkerBonusTests
     {
-        [Fact] 
+        [Fact]
         private void ElementTest()
         {
             var accauntant = new Accauntant();
-               
-            //Assert
-            Assert.Equal( 100  , accauntant.GetHours(Position.Junior));
 
+            //Assert
+            Assert.Equal(100, accauntant.GetHours(Position.Junior));
         }
 
         [Fact]
@@ -20,8 +19,7 @@ namespace WorkerBonus.Test
             var accauntant = new Accauntant();
 
             //Assert
-            Assert.False(accauntant.AskForBonus(Position.Junior, 120 ));
-
+            Assert.False(accauntant.AskForBonus(Position.Junior, 120));
         }
     }
 }
