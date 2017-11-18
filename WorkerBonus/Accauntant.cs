@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace WorkerBonus
 {
-    public enum Position : int
+    public enum Position 
     {
         Junior,
         Middle,
@@ -14,49 +10,28 @@ namespace WorkerBonus
         Teamleader
     }
 
-
     public class Accauntant
     {
         public int GetHours(Position programmer)
         {
-            var a =0;
             switch (programmer)
             {
                 case Position.Junior:
-                    a = 100;
-                    break;
-
+                    return 100;
                 case Position.Middle:
-                    a = 120;
-                    break;
-
+                    return 120;
                 case Position.Senior:
-                    a = 150;
-                    break;
-
+                    return 150;
                 case Position.Teamleader:
-                    a = 180;
-                    break;
-
+                    return 180;
                 default:
-                    throw new InvalidOperationException("unknown programmer position");
+                    throw new ArgumentException("unknown programmer position");
             }
-
-            return a;
         }
-
-
 
         public bool AskForBonus(Position worker, int hours)
         {
-            if (GetHours(worker) < hours )
-            {
-                return false;
-            }
-            else 
-            {
-                return true;
-            }
+            return GetHours(worker) >= hours;
         }
     }
 }

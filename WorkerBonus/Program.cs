@@ -1,28 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace WorkerBonus
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main()
         {
             Console.WriteLine("введите пороговое количество отработанных часов:");
-            int hoursStep = Convert.ToInt32(Console.ReadLine());
+            var hoursStep = Convert.ToInt32(Console.ReadLine());
 
-            Accauntant accauntant = new Accauntant();
+            var accauntant = new Accauntant();
 
-            if ( accauntant.AskForBonus(Position.Senior, hoursStep) == false)
-            {
-                Console.WriteLine("переработки нет , премия не начисляется ");
-            }
-            else
-            {
-                Console.WriteLine(" есть переработка , начисляется премия");
-            }
+            Console.WriteLine(accauntant.AskForBonus(Position.Senior, hoursStep) == false
+                ? "переработки нет , премия не начисляется "
+                : " есть переработка , начисляется премия");
 
             Console.ReadKey();
         }

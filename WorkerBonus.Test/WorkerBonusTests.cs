@@ -1,19 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Xunit;
+﻿using Xunit;
 
 namespace WorkerBonus.Test
 {
     public class WorkerBonusTests
     {
-
         [Fact] 
-        void ElementTest()
+        private void ElementTest()
         {
-            Accauntant accauntant = new Accauntant();
+            var accauntant = new Accauntant();
                
             //Assert
             Assert.Equal( 100  , accauntant.GetHours(Position.Junior));
@@ -21,9 +15,9 @@ namespace WorkerBonus.Test
         }
 
         [Fact]
-        void ResultTest()
+        private void ResultTest()
         {
-            Accauntant accauntant = new Accauntant();
+            var accauntant = new Accauntant();
 
             //Assert
             Assert.False(accauntant.AskForBonus(Position.Junior, 120 ));
